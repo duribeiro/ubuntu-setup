@@ -11,8 +11,8 @@ echo "=========================================================="
 echo "1. System Update & Upgrade..."
 sudo apt update && sudo apt upgrade -y
 
-echo "2. Installing Base System Utilities (curl, wget, git, build-essential)..."
-sudo apt install -y curl wget git build-essential
+echo "2. Installing Base System Utilities (curl, wget, git, build-essential, nano)..."
+sudo apt install -y curl wget git build-essential nano
 
 echo "3. Installing Terminal Utilities (zsh, bat, fzf, zoxide)..."
 # In Ubuntu, 'bat' is installed as 'batcat'
@@ -35,9 +35,8 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
 
 echo "6. Changing Default Shell to Zsh..."
-# It will prompt user if not sudo, but chsh -s usually works. If password is required, user provides it.
 if [ "$SHELL" != "/usr/bin/zsh" ]; then
-    chsh -s $(which zsh)
+    sudo chsh -s $(which zsh) $USER
 fi
 
 echo "7. Installing Oh My Zsh..."
