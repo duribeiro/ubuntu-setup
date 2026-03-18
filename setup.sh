@@ -24,14 +24,15 @@ sudo apt update
 sudo apt install -y fastfetch || echo "Fastfetch installation failed, continuing..."
 
 echo "4. Installing lsd (Modern ls with icons)..."
-LSD_VERSION="1.1.2"
+# Busca a última versão (tag release) diretamente da API do GitHub
+LSD_VERSION=$(curl -sL https://api.github.com/repos/lsd-rs/lsd/releases/latest | grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
 curl -LO "https://github.com/lsd-rs/lsd/releases/download/v${LSD_VERSION}/lsd-musl_${LSD_VERSION}_amd64.deb"
 sudo dpkg -i "lsd-musl_${LSD_VERSION}_amd64.deb"
 rm "lsd-musl_${LSD_VERSION}_amd64.deb"
 
-echo "5. Installing Node.js & npm (v20.x LTS)..."
-# Setting up NodeSource
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+echo "5. Installing Node.js & npm (Latest LTS)..."
+# Setting up NodeSource for the latest LTS version
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install -y nodejs
 
 echo "6. Changing Default Shell to Zsh..."
