@@ -1,35 +1,89 @@
-# Ubuntu Setup Script
+<div align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain-wordmark.svg" alt="Ubuntu Logo" width="120">
 
-Este repositório contém um script automatizado (`setup.sh`) desenhado para configurar rapidamente um ambiente de terminal de alta produtividade para desenvolvedores no Ubuntu ou distribuições baseadas em Debian.
+  # 🚀 Ubuntu Productivity Setup
+  
+  **O script definitivo para transformar distribuições baseadas em Debian/Ubuntu no ambiente de desenvolvimento de terminal perfeito, em questão de minutos.**
 
-## O que o script instala e configura?
-- **Atualização do sistema** base (`apt update && apt upgrade`).
-- **Pacotes Essenciais**: `curl`, `wget`, `git`, `build-essential`.
-- **Node.js**: Versão LTS v20.x baixada do NodeSource, com `npm`.
-- **Zsh & Oh My Zsh**: Troca o terminal padrão para Zsh, com Oh My Zsh.
-- **Utilitários Produtivos de Terminal**:
-  - `lsd`: Substituto do `ls` com suporte a ícones.
-  - `bat` (`batcat`): Substituto do `cat` com `syntax-highlighting`.
-  - `fastfetch`: Para visualizar dados rápidos do sistema.
-  - `fzf`: Localizador interativo para melhorar sua busca no histórico.
-  - `zoxide`: Navegador inteligente de diretórios (alternativa ao `cd`).
-- **Plugins do Zsh**:
-  - `zsh-autosuggestions`
-  - `zsh-syntax-highlighting`
-- **Aliases configurados**:
-  - `att` (atualiza o sistema)
-  - `ls`, `ll`, `tree` para rodar `lsd`
-- **Temas**: Tema randômico configurado para Zsh.
+  [![Shell Script](https://img.shields.io/badge/Language-Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)](setup.sh)
+  [![Ubuntu](https://img.shields.io/badge/Platform-Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](#)
+  [![Zsh](https://img.shields.io/badge/Shell-Zsh-yellow?style=for-the-badge&logo=gnome-terminal&logoColor=black)](#)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## Como Usar
+  <p>
+    <a href="#-sobre-o-projeto">Recursos</a> •
+    <a href="#%EF%B8%8F-instalação-rápida">Instalação</a> •
+    <a href="#-ferramentas-inclusas">Ferramentas</a>
+  </p>
+</div>
 
-Para configurar sua máquina instantaneamente, basta clonar este repositório e executar o script:
+---
+
+## 💡 Sobre o Projeto
+
+Este repositório fornece um script *plug-and-play* (`setup.sh`) preparado para automatizar o ambiente inicial de qualquer programador recém chegado ao **Ubuntu**. Ele elimina horas de configuração manual ao instalar e padronizar nativamente ferramentas fundamentais, compiladores, Node.js de última geração e um terminal altamente estético e inteligente usando **Zsh**, **FZF** e muito mais.
+
+---
+
+## ✨ Recursos
+
+- ⚡ **Zero Interação:** Todas as ferramentas são preparadas para baixar de forma automática e silenciosa suas respectivas últimas versões estáveis (LTS) através de APIs de Releases (como o repositório NodeSource e a API do GitHub).
+- 🎨 **Terminal Lindo:** Zsh turbinado com _Oh My Zsh_ e um seletor de tema aleatório diário (`fastfetch` acoplado visualmente para métricas de tela inicial).
+- 🧠 **Smart CLI:** Autocompletar interativo liderado pelo seu histórico prévio, e syntax-highlighting nativa de prompt.
+- 🔍 **Navegação Suprema:** FZF inserido para buscar comandos no seu histórico num piscar de olhos (`Ctrl+R`), e `zoxide` para pular para diretórios complexos com apenas 2 letras.
+
+---
+
+## 📦 Ferramentas Inclusas
+
+O script embarca automaticamente os seguintes pacotes na sua máquina:
+
+| Categoria | Stack |
+| :--- | :--- |
+| **Sistema & Base** | `curl`, `wget`, `git`, `build-essential`, `nano` |
+| **Shell & Core** | **Zsh**, **Oh My Zsh** |
+| **Plugins Zsh** | `zsh-autosuggestions`, `zsh-syntax-highlighting` |
+| **Programação** | **Node.js Latest LTS** e `npm` (Atualização Dinâmica) |
+| **Substituições Modernas** | `lsd` (substitui o *ls* com ícones), `batcat` (cat com cores sintáticas) |
+| **Navegação Rapida** | `fzf`, `zoxide`, `fastfetch` |
+
+---
+
+## ⚙️ Instalação Rápida
+
+Abra o seu terminal recém instalado no novo Ubuntu e rode os comandos abaixo passo-a-passo:
 
 ```bash
+# 1. Clone este repositório para o seu sistema:
 git clone https://github.com/duribeiro/ubuntu-setup.git
+
+# 2. Acesse a pasta do projeto e dê permissão:
 cd ubuntu-setup
 chmod +x setup.sh
+
+# 3. Inicie a mágica:
 ./setup.sh
 ```
 
-Ao final, recarregue seu terminal ou faça logoff/login, e divirta-se!
+> **Aviso:** O script fará atualizações completas via `apt update && apt upgrade` por padrão, o que pode demorar alguns minutos dependendo de quão antiga for sua mídia de instalação ou da velocidade da internet.
+> 
+> Ao final, **feche o terminal e abra um novo** para que as fontes, temas e atalhos surtam efeito definitivo!
+
+---
+
+## ⌨️ Aliases Produtivos
+
+Como extra, o `setup.sh` injetará também atalhos cruciais no seu arquivo `~/.zshrc` final, para poupar muita digitação e uso de cliques no seu decorrer:
+
+| Comando | Executará por trás | O que faz de verdade |
+| :--- | :--- | :--- |
+| `att` | `sudo apt update && sudo apt upgrade -y` | Atualiza todo o repositório do seu Linux em apenas 3 letras. |
+| `ls` | `lsd` | Lista os arquivos coloridos em blocos com favicons. |
+| `ll` | `lsd -l` | Lista verticalmente arquivos com visualização de dono e permissões explícitas. |
+| `tree`| `lsd --tree` | Mostra a árvore inteira hierárquica e ramificada nas pastas. |
+
+<br>
+
+<div align="center">
+  <sub>Criado de dev para dev. 💙</sub>
+</div>
