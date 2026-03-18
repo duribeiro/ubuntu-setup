@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain-wordmark.svg" alt="Ubuntu Logo" width="120">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu Logo" width="100">
 
   # 🚀 Ubuntu Productivity Setup
   
@@ -77,9 +77,11 @@ Como extra, o `setup.sh` injetará também atalhos cruciais no seu arquivo `~/.z
 
 | Comando | Executará por trás | O que faz de verdade |
 | :--- | :--- | :--- |
-| `att` | `sudo apt update && sudo apt upgrade -y` | Atualiza todo o repositório do seu Linux em apenas 3 letras. |
+| `update` | `sudo apt update && sudo apt upgrade -y` | Atualiza todo o repositório do seu Linux. |
 | `ls` | `lsd` | Lista os arquivos coloridos em blocos com favicons. |
 | `ll` | `lsd -l` | Lista verticalmente arquivos com visualização de dono e permissões explícitas. |
+| `la` | `lsd -a` | Lista todos os arquivos da pasta, incluindo os ocultos. |
+| `lla`| `lsd -la` | Lista todos os arquivos (ocultos inclusos) verticalmente com permissões. |
 | `tree`| `lsd --tree` | Mostra a árvore inteira hierárquica e ramificada nas pastas. |
 
 <br>

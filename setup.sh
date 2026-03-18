@@ -74,9 +74,11 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Productivity Aliases
-alias att="sudo apt update && sudo apt upgrade -y"
+alias update="sudo apt update && sudo apt upgrade -y"
 alias ls="lsd"
 alias ll="lsd -l"
+alias la="lsd -a"
+alias lla="lsd -la"
 alias tree="lsd --tree"
 
 # Initialize zoxide
