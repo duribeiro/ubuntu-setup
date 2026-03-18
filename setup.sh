@@ -63,14 +63,18 @@ if [ -f "$HOME/.zshrc" ]; then
 fi
 
 cat << 'EOF' > "$HOME/.zshrc"
+# Locale Settings to fix cursor overlapping in integrated terminals
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Custom PATH Configuration
 export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
 
 # Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Random Theme
-ZSH_THEME="random"
+# Theme: Travei no robbyrussell para evitar o bug de digitação do autosuggestions com temas exóticos
+ZSH_THEME="robbyrussell"
 
 # Plugins
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
