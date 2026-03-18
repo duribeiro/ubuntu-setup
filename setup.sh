@@ -63,6 +63,9 @@ if [ -f "$HOME/.zshrc" ]; then
 fi
 
 cat << 'EOF' > "$HOME/.zshrc"
+# Custom PATH Configuration
+export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
+
 # Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
