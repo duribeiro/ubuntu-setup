@@ -19,7 +19,6 @@ Este repositório contém um script automatizado (`setup.sh`) desenhado para con
 - **Aliases configurados**:
   - `att` (atualiza o sistema)
   - `ls`, `ll`, `tree` para rodar `lsd`
-  - `cat` para rodar `batcat`
 - **Temas**: Tema randômico configurado para Zsh.
 
 ## Como Usar

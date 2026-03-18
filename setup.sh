@@ -78,7 +78,6 @@ alias att="sudo apt update && sudo apt upgrade -y"
 alias ls="lsd"
 alias ll="lsd -l"
 alias tree="lsd --tree"
-alias cat="batcat"
 
 # Initialize zoxide
 eval "$(zoxide init zsh)"
