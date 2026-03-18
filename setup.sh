@@ -14,9 +14,14 @@ sudo apt update && sudo apt upgrade -y
 echo "2. Installing Base System Utilities (curl, wget, git, build-essential)..."
 sudo apt install -y curl wget git build-essential
 
-echo "3. Installing Terminal Utilities (zsh, bat, fastfetch, fzf, zoxide)..."
+echo "3. Installing Terminal Utilities (zsh, bat, fzf, zoxide)..."
 # In Ubuntu, 'bat' is installed as 'batcat'
-sudo apt install -y zsh bat fastfetch fzf zoxide
+sudo apt install -y zsh bat fzf zoxide
+
+echo "3.1. Installing fastfetch..."
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y || true
+sudo apt update
+sudo apt install -y fastfetch || echo "Fastfetch installation failed, continuing..."
 
 echo "4. Installing lsd (Modern ls with icons)..."
 LSD_VERSION="1.1.2"
